@@ -1,4 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <style name="Theme.AbelleGroup" parent="android:Theme.Material.Light.NoActionBar" />
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="Theme.AbelleGroup" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryDark">@color/purple_700</item>
+        <item name="colorAccent">@color/teal_200</item>
+
+        <!-- Optional: for status bar and navigation bar styling -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryDark</item>
+        <item name="android:navigationBarColor" tools:targetApi="l">?attr/colorPrimaryDark</item>
+
+        <!-- For consistent text color and appearance -->
+        <item name="android:textColorPrimary">#000000</item>
+        <item name="android:windowBackground">#FFFFFF</item>
+    </style>
+
 </resources>

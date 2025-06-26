@@ -20,12 +20,41 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="24dp" />
 
+        <ImageView
+            android:id="@+id/ivProfileImage"
+            android:layout_width="120dp"
+            android:layout_height="87dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop"
+            android:src="@android:drawable/ic_menu_camera" />
+
+        <Button
+            android:id="@+id/btnSelectImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Profile Image" />
+
         <EditText
             android:id="@+id/etName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Full Name"
+            android:hint="Username"
             android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone"
+            android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword" />
 
         <EditText
             android:id="@+id/etEmail"
@@ -34,12 +63,19 @@
             android:hint="Email"
             android:inputType="textEmailAddress" />
 
-        <EditText
-            android:id="@+id/etPassword"
+        <Button
+            android:id="@+id/btnSelectDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
-            android:inputType="textPassword" />
+            android:text="Select Date of Birth" />
+
+        <TextView
+            android:id="@+id/tvSelectedDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No date selected"
+            android:padding="8dp"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/tvError"
@@ -55,7 +91,7 @@
             android:layout_height="wrap_content"
             android:text="Register"
             android:layout_marginTop="16dp"
-            android:backgroundTint="#28a745"
+            android:backgroundTint="#0078D7"
             android:textColor="#ffffff" />
     </LinearLayout>
 </ScrollView>
