@@ -8,75 +8,108 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
 
+        <!-- Title -->
         <TextView
             android:id="@+id/signupTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Create Account"
-            android:textSize="24sp"
+            android:textSize="26sp"
             android:textStyle="bold"
-            android:layout_gravity="center_horizontal"
+            android:textColor="#333333"
             android:layout_marginBottom="24dp" />
 
+        <!-- Profile Image -->
+
+        <!-- Select Image Button -->
         <ImageView
             android:id="@+id/ivProfileImage"
             android:layout_width="120dp"
-            android:layout_height="87dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="8dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/circle_shape"
+            android:clipToOutline="true"
+            android:padding="4dp"
             android:scaleType="centerCrop"
             android:src="@android:drawable/ic_menu_camera" />
 
         <Button
             android:id="@+id/btnSelectImage"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Select Profile Image" />
+            android:text="Select Profile Image"
+            android:backgroundTint="#0078D7"
+            android:textColor="#ffffff"
+            android:layout_marginBottom="16dp" />
 
+        <!-- Username -->
         <EditText
             android:id="@+id/etName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Username"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:layout_marginBottom="12dp" />
 
-        <EditText
-            android:id="@+id/etPhone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Phone"
-            android:inputType="phone" />
-
-        <EditText
-            android:id="@+id/etPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Password"
-            android:inputType="textPassword" />
-
+        <!-- Email -->
         <EditText
             android:id="@+id/etEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:layout_marginBottom="12dp" />
 
-        <Button
-            android:id="@+id/btnSelectDate"
+        <!-- Phone -->
+        <EditText
+            android:id="@+id/etPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Select Date of Birth" />
+            android:hint="Phone"
+            android:inputType="phone"
+            android:layout_marginBottom="12dp" />
 
-        <TextView
-            android:id="@+id/tvSelectedDate"
+        <!-- Password -->
+        <EditText
+            android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="No date selected"
-            android:padding="8dp"
-            android:textSize="16sp" />
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:layout_marginBottom="12dp" />
 
+        <!-- Date of Birth -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+
+            <Button
+                android:id="@+id/btnSelectDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Date of Birth"
+                android:backgroundTint="#0078D7"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:id="@+id/tvSelectedDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No date selected"
+                android:paddingStart="12dp"
+                android:textSize="16sp"
+                android:textColor="#555555" />
+        </LinearLayout>
+
+        <!-- Error Message -->
         <TextView
             android:id="@+id/tvError"
             android:layout_width="match_parent"
@@ -85,13 +118,142 @@
             android:paddingTop="8dp"
             android:textSize="14sp" />
 
+        <!-- Signup Button -->
         <Button
             android:id="@+id/btnSignup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Register"
-            android:layout_marginTop="16dp"
-            android:backgroundTint="#0078D7"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#28a745"
             android:textColor="#ffffff" />
+
     </LinearLayout>
 </ScrollView>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:padding="24dp"-->
+<!--    android:background="#f8f9fa">-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:gravity="center_horizontal">-->
+
+<!--        &lt;!&ndash; Title &ndash;&gt;-->
+<!--        <TextView-->
+<!--            android:id="@+id/signupTitle"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Create Account"-->
+<!--            android:textSize="26sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textColor="#333333"-->
+<!--            android:layout_marginBottom="24dp" />-->
+
+<!--        &lt;!&ndash; Profile Image &ndash;&gt;-->
+<!--        <ImageView-->
+<!--            android:id="@+id/ivProfileImage"-->
+<!--            android:layout_width="120dp"-->
+<!--            android:layout_height="120dp"-->
+<!--            android:layout_marginBottom="12dp"-->
+<!--            android:background="@drawable/circle_shape"-->
+<!--            android:padding="4dp"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            android:src="@android:drawable/ic_menu_camera" />-->
+
+<!--        &lt;!&ndash; Select Image Button &ndash;&gt;-->
+<!--        <Button-->
+<!--            android:id="@+id/btnSelectImage"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Select Profile Image"-->
+<!--            android:backgroundTint="#0078D7"-->
+<!--            android:textColor="#ffffff" />-->
+
+<!--        &lt;!&ndash; Username &ndash;&gt;-->
+<!--        <EditText-->
+<!--            android:id="@+id/etName"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Username"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:inputType="textPersonName" />-->
+
+<!--        &lt;!&ndash; Phone &ndash;&gt;-->
+<!--        <EditText-->
+<!--            android:id="@+id/etPhone"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Phone"-->
+<!--            android:inputType="phone" />-->
+
+<!--        &lt;!&ndash; Password &ndash;&gt;-->
+<!--        <EditText-->
+<!--            android:id="@+id/etPassword"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Password"-->
+<!--            android:inputType="textPassword" />-->
+
+<!--        &lt;!&ndash; Email &ndash;&gt;-->
+<!--        <EditText-->
+<!--            android:id="@+id/etEmail"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Email"-->
+<!--            android:inputType="textEmailAddress" />-->
+
+<!--        &lt;!&ndash; Date of Birth &ndash;&gt;-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:layout_marginTop="8dp">-->
+
+<!--            <Button-->
+<!--                android:id="@+id/btnSelectDate"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Select Date of Birth"-->
+<!--                android:backgroundTint="#0078D7"-->
+<!--                android:textColor="#ffffff" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tvSelectedDate"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text="No date selected"-->
+<!--                android:paddingStart="12dp"-->
+<!--                android:textSize="16sp"-->
+<!--                android:textColor="#555555" />-->
+<!--        </LinearLayout>-->
+
+<!--        &lt;!&ndash; Error Message &ndash;&gt;-->
+<!--        <TextView-->
+<!--            android:id="@+id/tvError"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textColor="#ff0000"-->
+<!--            android:paddingTop="8dp"-->
+<!--            android:textSize="14sp" />-->
+
+<!--        &lt;!&ndash; Signup Button &ndash;&gt;-->
+<!--        <Button-->
+<!--            android:id="@+id/btnSignup"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Register"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:backgroundTint="#28a745"-->
+<!--            android:textColor="#ffffff" />-->
+
+<!--    </LinearLayout>-->
+<!--</ScrollView>-->

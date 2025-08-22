@@ -21,6 +21,7 @@ securityCryptoKtx = "1.0.0"
 uiTestAndroid = "1.5.1"
 animation = "1.2.1"
 mediationTestSuite = "3.0.0"
+firebaseAppdistributionGradle = "5.1.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -50,6 +51,7 @@ androidx-security-crypto-ktx = { group = "androidx.security", name = "security-c
 androidx-ui-test-android = { group = "androidx.compose.ui", name = "ui-test-android", version.ref = "uiTestAndroid" }
 androidx-animation = { group = "androidx.compose.animation", name = "animation", version.ref = "animation" }
 mediation-test-suite = { group = "com.google.android.ads", name = "mediation-test-suite", version.ref = "mediationTestSuite" }
+firebase-appdistribution-gradle = { group = "com.google.firebase", name = "firebase-appdistribution-gradle", version.ref = "firebaseAppdistributionGradle" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

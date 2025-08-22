@@ -1,9 +1,13 @@
 package com.patrice.abellegroup.api
+import android.content.Context
+import okhttp3.Interceptor
+import okhttp3.OkHttpClient
+import okhttp3.Request
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClient {
-    private const val BASE_URL = "https://ddef-41-90-211-144.ngrok-free.app"
+    private const val BASE_URL = "https://0dac51a78838.ngrok-free.app"
 
     val apiService: ApiService by lazy {
         Retrofit.Builder()
