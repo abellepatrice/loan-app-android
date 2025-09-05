@@ -1,7 +1,9 @@
 package com.patrice.abellegroup.models
 
+import com.google.gson.annotations.SerializedName
+
 data class User (
-   val id : String,
+   @SerializedName("_id") val id: String,  // 👈 map _id → id
    val username: String,
    val phone: String,
    val dob: String,

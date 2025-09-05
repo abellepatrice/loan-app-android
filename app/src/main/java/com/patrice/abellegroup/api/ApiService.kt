@@ -1,5 +1,9 @@
 package com.patrice.abellegroup.api
 
+import com.google.android.gms.common.api.Response
+import com.patrice.abellegroup.models.LoanRequest
+import com.patrice.abellegroup.models.LoanResponse
+//import com.patrice.abellegroup.models.LoanResponse
 import com.patrice.abellegroup.models.LoginRequest
 import com.patrice.abellegroup.models.LoginResponse
 import com.patrice.abellegroup.models.RefreshRequest
@@ -10,6 +14,7 @@ import com.patrice.abellegroup.models.UserProfileResponse
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Call
+//import retrofit2.Response
 import retrofit2.http.*
 
 interface ApiService {
@@ -55,6 +60,11 @@ interface ApiService {
     fun getUserProfile(
         @Header("Authorization") token: String
     ): Call<UserProfileResponse>
+
+    @POST("/api/loan/apply")
+    fun applyLoan(
+        @Header("Authorization") token: String,
+        @Body loanRequest: LoanRequest): Call<LoanResponse>
 }
 
 //package com.patrice.abellegroup.api
