@@ -99,6 +99,6 @@ dependencies {
 
     // Version catalog (keep if needed)
     implementation(libs.androidx.preference.ktx)
-    implementation(libs.play.services.cast.framework)
+//    implementation(libs.play.services.cast.framework)
     implementation(libs.firebase.appdistribution.gradle)
 }

@@ -1,6 +1,46 @@
 <resources>
+    <!-- App Info -->
     <string name="app_name">Abelle Group</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- Settings Sections -->
+    <string name="settings_title">Settings</string>
+    <string name="account_section">Account</string>
+    <string name="preferences_section">Preferences</string>
+    <string name="legal_section">Legal</string>
+    <string name="help_section">Help &amp; Support</string>
+    <string name="build_info_section">Build Info</string>
+
+    <!-- Account -->
+    <string name="edit_profile">Edit Profile</string>
+    <string name="logout">Logout</string>
+
+    <!-- Preferences -->
+    <string name="theme">Theme</string>
+    <string name="language">Language</string>
+    <string name="notifications">Notifications</string>
+
+    <!-- Legal -->
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="terms_conditions">Terms &amp; Conditions</string>
+    <string name="about_us">About Us</string>
+
+    <!-- Help -->
+    <string name="faq">FAQ</string>
+    <string name="contact_support">Contact Support</string>
+
+    <!-- Build Info -->
+    <string name="version">Version</string>
+    <string name="version_name">1.0.0</string>
+    <string name="build_number">1</string>
+
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="theme_system_default">System Default</string>
+
+    <string name="lang_english">English</string>
+    <string name="lang_swahili">Kiswahili</string>
+    <string name="lang_french">French</string>
 
 </resources>

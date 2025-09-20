@@ -10,3 +10,4 @@ data class Loan(
     val status: String = "pending",  // pending | approved | rejected
     val createdAt: String? = null    // Loan creation timestamp
 )
+

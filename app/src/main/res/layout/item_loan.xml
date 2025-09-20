@@ -58,14 +58,14 @@
             android:textColor="#007BFF"
             android:layout_marginTop="4dp" />
 
-        <TextView
-            android:id="@+id/tvCreatedAt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Created: 2025-09-05"
-            android:textSize="12sp"
-            android:textColor="#6C757D"
-            android:layout_marginTop="2dp" />
+<!--        <TextView-->
+<!--            android:id="@+id/tvCreatedAt"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Created: 2025-09-05"-->
+<!--            android:textSize="12sp"-->
+<!--            android:textColor="#6C757D"-->
+<!--            android:layout_marginTop="2dp" />-->
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

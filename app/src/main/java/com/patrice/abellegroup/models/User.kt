@@ -8,6 +8,8 @@ data class User (
    val phone: String,
    val dob: String,
    val email : String,
-   val password: String
+   val profileImage: String? = null,
+   val role: String? = "user",
+   val createdAt: String
 
    )

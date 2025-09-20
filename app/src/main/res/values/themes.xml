@@ -1,20 +1,86 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
 
-    <!-- Base application theme. -->
-    <style name="Theme.AbelleGroup" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
+    <!-- Default system-following theme -->
+    <style name="Theme.AbelleGroup" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryDark">@color/purple_700</item>
-        <item name="colorAccent">@color/teal_200</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="android:windowBackground">?android:attr/windowBackground</item>
+    </style>
 
-        <!-- Optional: for status bar and navigation bar styling -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryDark</item>
-        <item name="android:navigationBarColor" tools:targetApi="l">?attr/colorPrimaryDark</item>
-
-        <!-- For consistent text color and appearance -->
+    <!-- Light theme -->
+    <style name="Theme.AbelleGroup.Light" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorOnPrimary">@android:color/white</item>
         <item name="android:textColorPrimary">#000000</item>
         <item name="android:windowBackground">#FFFFFF</item>
     </style>
 
+    <!-- Dark theme -->
+    <style name="Theme.AbelleGroup.Dark" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorOnPrimary">@android:color/black</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:windowBackground">#000000</item>
+    </style>
+
 </resources>
+
+    <!--<resources>-->
+
+<!--    &lt;!&ndash; Default system-following theme &ndash;&gt;-->
+<!--    <style name="Theme.AbelleGroup" parent="Theme.MaterialComponents.DayNight.NoActionBar">-->
+<!--        <item name="colorPrimary">@color/purple_500</item>-->
+<!--        <item name="colorPrimaryDark">@color/purple_700</item>-->
+<!--        <item name="colorAccent">@color/teal_200</item>-->
+<!--        <item name="android:textColorPrimary">?android:attr/textColorPrimary</item>-->
+<!--        <item name="android:windowBackground">?android:attr/windowBackground</item>-->
+<!--    </style>-->
+
+<!--    &lt;!&ndash; Light theme &ndash;&gt;-->
+<!--    <style name="Theme.AbelleGroup.Light" parent="Theme.MaterialComponents.Light.NoActionBar">-->
+<!--        <item name="colorPrimary">@color/purple_500</item>-->
+<!--        <item name="colorPrimaryDark">@color/purple_700</item>-->
+<!--        <item name="colorAccent">@color/teal_200</item>-->
+<!--        <item name="android:textColorPrimary">#000000</item>-->
+<!--        <item name="android:windowBackground">#FFFFFF</item>-->
+<!--    </style>-->
+
+<!--    &lt;!&ndash; Dark theme &ndash;&gt;-->
+<!--    <style name="Theme.AbelleGroup.Dark" parent="Theme.MaterialComponents.NoActionBar">-->
+<!--        <item name="colorPrimary">@color/purple_200</item>-->
+<!--        <item name="colorPrimaryDark">@color/purple_700</item>-->
+<!--        <item name="colorAccent">@color/teal_200</item>-->
+<!--        <item name="android:textColorPrimary">#FFFFFF</item>-->
+<!--        <item name="android:windowBackground">#000000</item>-->
+<!--    </style>-->
+
+<!--</resources>-->
+
+<!--<resources xmlns:tools="http://schemas.android.com/tools">-->
+
+<!--    &lt;!&ndash; Base application theme. &ndash;&gt;-->
+<!--    <style name="Theme.AbelleGroup" parent="Theme.AppCompat.Light.NoActionBar">-->
+<!--        &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+<!--        <item name="colorPrimary">@color/purple_500</item>-->
+<!--        <item name="colorPrimaryDark">@color/purple_700</item>-->
+<!--        <item name="colorAccent">@color/teal_200</item>-->
+
+<!--        &lt;!&ndash; Optional: for status bar and navigation bar styling &ndash;&gt;-->
+<!--        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryDark</item>-->
+<!--        <item name="android:navigationBarColor" tools:targetApi="l">?attr/colorPrimaryDark</item>-->
+
+<!--        &lt;!&ndash; For consistent text color and appearance &ndash;&gt;-->
+<!--        <item name="android:textColorPrimary">#000000</item>-->
+<!--        <item name="android:windowBackground">#FFFFFF</item>-->
+<!--        -->
+<!--        -->
+<!--    </style>-->
+<!--    -->
+
+<!--</resources>-->

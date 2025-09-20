@@ -3,11 +3,12 @@ import android.content.Context
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.Request
+import com.patrice.abellegroup.utils.Constants.BASE_URL
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClient {
-    private const val BASE_URL = "https://839f95e3f2df.ngrok-free.app"
+
 
     val apiService: ApiService by lazy {
         Retrofit.Builder()

@@ -1,11 +1,12 @@
 package com.patrice.abellegroup.api
 
-import com.google.android.gms.common.api.Response
+//import com.google.android.gms.common.api.Response
 import com.patrice.abellegroup.models.LoanRequest
 import com.patrice.abellegroup.models.LoanResponse
 //import com.patrice.abellegroup.models.LoanResponse
 import com.patrice.abellegroup.models.LoginRequest
 import com.patrice.abellegroup.models.LoginResponse
+import com.patrice.abellegroup.models.MyLoansResponse
 import com.patrice.abellegroup.models.RefreshRequest
 import com.patrice.abellegroup.models.SignupResponse
 import com.patrice.abellegroup.models.UpdateProfileResponse
@@ -21,7 +22,7 @@ interface ApiService {
 
     // Signup with image upload
     @Multipart
-    @POST("/api/auth/signup")
+    @POST("auth/signup")
     fun signup(
         @Part("username") username: RequestBody,
         @Part("email") email: RequestBody,
@@ -33,12 +34,12 @@ interface ApiService {
 
     // Login
     @Headers("Content-Type: application/json")
-    @POST("/api/auth/login")
+    @POST("auth/login")
     fun login(@Body request: LoginRequest): Call<LoginResponse>
 
     // Update profile with optional image
     @Multipart
-    @PUT("/api/user/profile")
+    @PUT("user/profile")
     fun updateProfile(
         @Header("Authorization") token: String,
         @Part("username") username: RequestBody,
@@ -48,23 +49,25 @@ interface ApiService {
 
     // Direct image upload
     @Multipart
-    @POST("/api/upload")
+    @POST("upload")
     fun uploadImage(@Part image: MultipartBody.Part): Call<UploadResponse>
     @POST("auth/refresh")
-    suspend fun refreshToken(@Body request: RefreshRequest): LoginResponse
+    fun refreshToken(@Body request: RefreshRequest): LoginResponse
 
-
-//    @GET("user/profile")
-//    fun getUserProfile(): Call<UserProfileResponse>
-    @GET("/api/user/profile")
+    @GET("user/profile")
     fun getUserProfile(
         @Header("Authorization") token: String
     ): Call<UserProfileResponse>
 
-    @POST("/api/loan/apply")
+    @POST("loan/apply")
     fun applyLoan(
         @Header("Authorization") token: String,
         @Body loanRequest: LoanRequest): Call<LoanResponse>
+    @GET("loan/my-loans")
+    fun getMyLoans(
+        @Header("Authorization") token: String
+    ): Call<MyLoansResponse>
+
 }
 
 //package com.patrice.abellegroup.api

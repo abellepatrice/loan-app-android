@@ -63,7 +63,7 @@
 
     <!-- RecyclerView for loans -->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerLoans"
+        android:id="@+id/recyclerviewLoans"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:clipToPadding="false"
@@ -75,3 +75,18 @@
         tools:listitem="@layout/item_loan" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:orientation="vertical"-->
+<!--    android:padding="16dp">-->
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/recyclerViewLoans"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:scrollbars="vertical" />-->
+
+<!--</LinearLayout>-->

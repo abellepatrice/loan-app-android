@@ -1,7 +1,6 @@
 package com.patrice.abellegroup.models
 
-data class LoanResponse(
-    val success: Boolean,
+data class MyLoansResponse(
+    val loans: List<Loan>,
     val message: String
 )
-
