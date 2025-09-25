@@ -37,6 +37,9 @@
             android:name=".SignupActivity"
             android:exported="false"/>
         <activity
+            android:name=".RatingActivity"
+            android:exported="false" />
+        <activity
             android:name=".MyLoansActivity"
             android:exported="false"/>
         <activity
@@ -50,6 +53,12 @@
             android:exported="false"/>
         <activity
             android:name=".ApplyLoanActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".BaseActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".WebViewActivity"
             android:exported="false"/>
         <activity
             android:name=".MainActivity"

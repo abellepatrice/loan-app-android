@@ -4,17 +4,17 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import androidx.activity.ComponentActivity
+import androidx.appcompat.app.AppCompatActivity
 import androidx.security.crypto.EncryptedSharedPreferences
 import androidx.security.crypto.MasterKeys
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         val settingsPref = getSharedPreferences("settings", Context.MODE_PRIVATE)
         when (settingsPref.getString("theme", "system")) {
             "light" -> setTheme(R.style.Theme_AbelleGroup_Light)
             "dark" -> setTheme(R.style.Theme_AbelleGroup_Dark)
-            else -> setTheme(R.style.Theme_AbelleGroup) // system default
+            else -> setTheme(R.style.Theme_AbelleGroup_Light)
         }
 
         super.onCreate(savedInstanceState)
@@ -30,7 +30,6 @@ class MainActivity : ComponentActivity() {
                     EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM
                 )
             } catch (e: Exception) {
-                // Old/corrupted prefs → reset
                 applicationContext.deleteSharedPreferences("LoginPrefs")
                 val masterKeyAlias = MasterKeys.getOrCreate(MasterKeys.AES256_GCM_SPEC)
                 EncryptedSharedPreferences.create(
@@ -45,7 +44,6 @@ class MainActivity : ComponentActivity() {
             getSharedPreferences("LoginPrefs", Context.MODE_PRIVATE)
         }
 
-        // --- Check login state ---
         val isLoggedIn = sharedPref.getBoolean("isLoggedIn", false)
 
         val nextActivity = if (isLoggedIn) {

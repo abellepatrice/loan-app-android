@@ -1,6 +1,8 @@
 package com.patrice.abellegroup.api
 
 //import com.google.android.gms.common.api.Response
+import com.patrice.abellegroup.models.FeedbackRequest
+import com.patrice.abellegroup.models.FeedbackResponse
 import com.patrice.abellegroup.models.LoanRequest
 import com.patrice.abellegroup.models.LoanResponse
 //import com.patrice.abellegroup.models.LoanResponse
@@ -67,6 +69,13 @@ interface ApiService {
     fun getMyLoans(
         @Header("Authorization") token: String
     ): Call<MyLoansResponse>
+
+    @POST("feedback")
+    fun submitFeedback(
+        @Header("Authorization") token: String,
+        @Body request: FeedbackRequest
+    ): Call<FeedbackResponse>
+
 
 }
 
